@@ -1,0 +1,4 @@
+mariadb
+create database vacation
+mysql vacation > vacation.sql
+
