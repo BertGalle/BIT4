@@ -1,0 +1,21 @@
+UNF is unstructured with repeating groups
+DB(Customer_ID,Customer_name,State,Item_ID,Description,Order_ID,Amount,Employee)
+
+1NF no repeating groups, all data present and set a primary key
+Order_ID, Customer_ID, Customer_name and State will need to be added in the rows
+DB(Customer_ID,Customer_name,State,Item_ID,Description,Order_ID,Amount,Employee)
+Customer_ID, Order_ID as primary key
+
+2NF no partial dependencies
+DB(Customer_ID,Order_ID) 
+Customer(Customer_ID,Customer_name,State)
+Item(Order_ID, Item_ID,Description,Amount,Employee)
+
+3NF no transitive dependencies, non key not dependant on non key
+Decription is based on the Item_ID which is non key
+DB(Customer_ID,Order_ID)
+Customer(Customer_ID,Customer_name,State)
+Item(Order_ID,Item_ID,Amount,Employee)
+Description(Item_ID,Description)
+State is dependant on Customer_ID which is key, Amount and Employee are dependant on Order_ID which is key
+
